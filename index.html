@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Itilite - Assignment 2</title>
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  		<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<link rel="stylesheet" type="text/css" href="assets/style/style.css">
+		
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light">
+		  <a class="navbar-brand" href="#"><img src="assets/img/itilite-logo-1.png" class="logo"></a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="nav nav-pills mr-auto">
+			  <li class="nav-item">
+			    <a class="nav-link active" href="#">Dashboard</a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link" href="#">Create New Trip</a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link" href="#">Service Request</a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link" href="#">Use IL Cash</a>
+			  </li>
+			</ul>
+		    <div class="my-2 my-lg-0 mob-text-right">
+		    	<span class="navbar-icon"><i class="fa fa-bell-o" aria-hidden="true"></i></span>
+		    	<span class="navbar-icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></span>
+		    	<span class="navbar-user-dropdown">
+		    		<span class="dropdown show">
+					  <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					    Shreyansh
+					  </a>
+
+					  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+					  	<a class="dropdown-item" href="#">View Details</a>
+				        <a class="dropdown-item" href="#">Edit Profile</a>
+				        <div class="dropdown-divider"></div>
+				        <a class="dropdown-item" href="#">Logout</a>
+					  </div>
+					</span>
+				</span>
+		    </div>
+		    <!-- <form class="form-inline">
+		      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+		      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+		    </form> -->
+		  </div>
+		</nav>
+
+		<div class="content-wrapper">
+			<div class="content-container">
+				<div class="row">
+					<div class="col-12 col-md-3">
+						<h3 class="updateItinerary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Update Itinerary</h3>
+					</div>
+					<div class="col-12 col-md-9">
+						<div class="d-none d-md-block">
+							<div class="row flight-columns">
+						    	<div class="col-md-2 offset-md-3">Departure</div>
+						    	<div class="col-md-2">Duration</div>
+						    	<div class="col-md-2">Arrival</div>
+						    	<div class="col-md-2">Price <i class="fa fa-arrow-up" aria-hidden="true"></i></div>
+						    </div>
+						</div>
+					    <form>
+							<div class="card">
+							  <div class="card-body">
+							    <div class="row">
+							    	<div class="col-12 col-md-3">
+							    		<div class="d-flex flex-nowrap">
+							    			<div class="">
+							    				<input type="radio" name="flight">
+							    			</div>
+							    			<div class="p-2 d-flex">
+							    				<div>
+							    					<img class="flight-logo" src="assets/img/airasia.png" alt="Air Asia">
+							    				</div>
+							    				<div class="flight-details">
+							    					<h5 class="flight-name">Air Asia</h5>
+							    					<span class="flight-number">l5-454</span>
+							    					<span class="flight-class">Business Class</span>
+							    					<span class="refund-status">Partially Refundable</span>
+							    				</div>
+							    			</div>
+							    		</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-departure-details">
+					    					<span class="departure-time">06:00</span>
+					    					<span class="departure-place">BLR</span>
+					    					<span class="departure-date">03 feb</span>
+					    					<span class="departure-status">Late Departure</span>
+					    				</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div>
+							    			<img class="flight-time-img" src="assets/img/flight-time.png" alt="flight time">
+							    		</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-arrival-details">
+					    					<span class="arrival-time">15:34</span>
+					    					<span class="arrival-place">HYD</span>
+					    					<span class="arrival-date">03 feb</span>
+					    					<span class="arrival-status">SME Fare</span>
+					    				</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-price-details">
+					    					<span class="price">6757 INR</span>
+					    					<span class="price-policy">Outside Policy</span>
+					    					<a class="btn more-flight-details" data-toggle="collapse" href="#flightDetails1" role="button" aria-expanded="false" aria-controls="flightDetails1">
+											    Flight Details <i class="fa fa-caret-down"></i>
+											</a>
+					    				</div>
+							    	</div>
+							    </div>
+							    <div class="row">
+							    	<div class="collapse" id="flightDetails1">
+									  <div class="card card-body">
+									    More Details of Flight
+									  </div>
+									</div>
+							    </div>
+							  </div>
+							</div>
+							<div class="card">
+							  <div class="card-body">
+							    <div class="row">
+							    	<div class="col-12 col-md-3">
+							    		<div class="d-flex flex-nowrap">
+							    			<div class="">
+							    				<input type="radio" name="flight">
+							    			</div>
+							    			<div class="p-2 d-flex">
+							    				<div>
+							    					<img class="flight-logo" src="assets/img/airasia.png" alt="Air Asia">
+							    				</div>
+							    				<div class="flight-details">
+							    					<h5 class="flight-name">Air Asia</h5>
+							    					<span class="flight-number">l5-454</span>
+							    					<span class="flight-class">Business Class</span>
+							    					<span class="refund-status">Partially Refundable</span>
+							    				</div>
+							    			</div>
+							    		</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-departure-details">
+					    					<span class="departure-time">06:00</span>
+					    					<span class="departure-place">BLR</span>
+					    					<span class="departure-date">03 feb</span>
+					    					<span class="departure-status">Late Departure</span>
+					    				</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div>
+							    			<img class="flight-time-img" src="assets/img/flight-time.png" alt="flight time">
+							    		</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-arrival-details">
+					    					<span class="arrival-time">15:34</span>
+					    					<span class="arrival-place">HYD</span>
+					    					<span class="arrival-date">03 feb</span>
+					    					<span class="arrival-status">SME Fare</span>
+					    				</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-price-details">
+					    					<span class="price">6757 INR</span>
+					    					<span class="price-policy">Outside Policy</span>
+					    					<a class="btn more-flight-details" data-toggle="collapse" href="#flightDetails2" role="button" aria-expanded="false" aria-controls="flightDetails2">
+											    Flight Details <i class="fa fa-caret-down"></i>
+											</a>
+					    				</div>
+							    	</div>
+							    </div>
+							    <div class="row">
+							    	<div class="collapse" id="flightDetails2">
+									  <div class="card card-body">
+									    More Details of Flight
+									  </div>
+									</div>
+							    </div>
+							  </div>
+							</div>
+							<div class="card">
+							  <div class="card-body">
+							    <div class="row">
+							    	<div class="col-12 col-md-3">
+							    		<div class="d-flex flex-nowrap">
+							    			<div class="">
+							    				<input type="radio" name="flight">
+							    			</div>
+							    			<div class="p-2 d-flex">
+							    				<div>
+							    					<img class="flight-logo" src="assets/img/airasia.png" alt="Air Asia">
+							    				</div>
+							    				<div class="flight-details">
+							    					<h5 class="flight-name">Air Asia</h5>
+							    					<span class="flight-number">l5-454</span>
+							    					<span class="flight-class">Business Class</span>
+							    					<span class="refund-status">Partially Refundable</span>
+							    				</div>
+							    			</div>
+							    		</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-departure-details">
+					    					<span class="departure-time">06:00</span>
+					    					<span class="departure-place">BLR</span>
+					    					<span class="departure-date">03 feb</span>
+					    					<span class="departure-status">Late Departure</span>
+					    				</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div>
+							    			<img class="flight-time-img" src="assets/img/flight-time.png" alt="flight time">
+							    		</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-arrival-details">
+					    					<span class="arrival-time">15:34</span>
+					    					<span class="arrival-place">HYD</span>
+					    					<span class="arrival-date">03 feb</span>
+					    					<span class="arrival-status">SME Fare</span>
+					    				</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-price-details">
+					    					<span class="price">6757 INR</span>
+					    					<span class="price-policy">Outside Policy</span>
+					    					<a class="btn more-flight-details" data-toggle="collapse" href="#flightDetails3" role="button" aria-expanded="false" aria-controls="flightDetails3">
+											    Flight Details <i class="fa fa-caret-down"></i>
+											</a>
+					    				</div>
+							    	</div>
+							    </div>
+							    <div class="row">
+							    	<div class="collapse" id="flightDetails3">
+									  <div class="card card-body">
+									    More Details of Flight
+									  </div>
+									</div>
+							    </div>
+							  </div>
+							</div>
+							<div class="card">
+							  <div class="card-body">
+							    <div class="row">
+							    	<div class="col-12 col-md-3">
+							    		<div class="d-flex flex-nowrap">
+							    			<div class="">
+							    				<input type="radio" name="flight">
+							    			</div>
+							    			<div class="p-2 d-flex">
+							    				<div>
+							    					<img class="flight-logo" src="assets/img/airasia.png" alt="Air Asia">
+							    				</div>
+							    				<div class="flight-details">
+							    					<h5 class="flight-name">Air Asia</h5>
+							    					<span class="flight-number">l5-454</span>
+							    					<span class="flight-class">Business Class</span>
+							    					<span class="refund-status">Partially Refundable</span>
+							    				</div>
+							    			</div>
+							    		</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-departure-details">
+					    					<span class="departure-time">06:00</span>
+					    					<span class="departure-place">BLR</span>
+					    					<span class="departure-date">03 feb</span>
+					    					<span class="departure-status">Late Departure</span>
+					    				</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div>
+							    			<img class="flight-time-img" src="assets/img/flight-time.png" alt="flight time">
+							    		</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-arrival-details">
+					    					<span class="arrival-time">15:34</span>
+					    					<span class="arrival-place">HYD</span>
+					    					<span class="arrival-date">03 feb</span>
+					    					<span class="arrival-status">SME Fare</span>
+					    				</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-price-details">
+					    					<span class="price">6757 INR</span>
+					    					<span class="price-policy">Outside Policy</span>
+					    					<a class="btn more-flight-details" data-toggle="collapse" href="#flightDetails4" role="button" aria-expanded="false" aria-controls="flightDetails4">
+											    Flight Details <i class="fa fa-caret-down"></i>
+											</a>
+					    				</div>
+							    	</div>
+							    </div>
+							    <div class="row">
+							    	<div class="collapse" id="flightDetails4">
+									  <div class="card card-body">
+									    More Details of Flight
+									  </div>
+									</div>
+							    </div>
+							  </div>
+							</div>
+							<div class="card">
+							  <div class="card-body">
+							    <div class="row">
+							    	<div class="col-12 col-md-3">
+							    		<div class="d-flex flex-nowrap">
+							    			<div class="">
+							    				<input type="radio" name="flight">
+							    			</div>
+							    			<div class="p-2 d-flex">
+							    				<div>
+							    					<img class="flight-logo" src="assets/img/airasia.png" alt="Air Asia">
+							    				</div>
+							    				<div class="flight-details">
+							    					<h5 class="flight-name">Air Asia</h5>
+							    					<span class="flight-number">l5-454</span>
+							    					<span class="flight-class">Business Class</span>
+							    					<span class="refund-status">Partially Refundable</span>
+							    				</div>
+							    			</div>
+							    		</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-departure-details">
+					    					<span class="departure-time">06:00</span>
+					    					<span class="departure-place">BLR</span>
+					    					<span class="departure-date">03 feb</span>
+					    					<span class="departure-status">Late Departure</span>
+					    				</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div>
+							    			<img class="flight-time-img" src="assets/img/flight-time.png" alt="flight time">
+							    		</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-arrival-details">
+					    					<span class="arrival-time">15:34</span>
+					    					<span class="arrival-place">HYD</span>
+					    					<span class="arrival-date">03 feb</span>
+					    					<span class="arrival-status">SME Fare</span>
+					    				</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-price-details">
+					    					<span class="price">6757 INR</span>
+					    					<span class="price-policy">Outside Policy</span>
+					    					<a class="btn more-flight-details" data-toggle="collapse" href="#flightDetails5" role="button" aria-expanded="false" aria-controls="flightDetails5">
+											    Flight Details <i class="fa fa-caret-down"></i>
+											</a>
+					    				</div>
+							    	</div>
+							    </div>
+							    <div class="row">
+							    	<div class="collapse" id="flightDetails5">
+									  <div class="card card-body">
+									    More Details of Flight
+									  </div>
+									</div>
+							    </div>
+							  </div>
+							</div>
+							<div class="card">
+							  <div class="card-body">
+							    <div class="row">
+							    	<div class="col-12 col-md-3">
+							    		<div class="d-flex flex-nowrap">
+							    			<div class="">
+							    				<input type="radio" name="flight">
+							    			</div>
+							    			<div class="p-2 d-flex">
+							    				<div>
+							    					<img class="flight-logo" src="assets/img/airasia.png" alt="Air Asia">
+							    				</div>
+							    				<div class="flight-details">
+							    					<h5 class="flight-name">Air Asia</h5>
+							    					<span class="flight-number">l5-454</span>
+							    					<span class="flight-class">Business Class</span>
+							    					<span class="refund-status">Partially Refundable</span>
+							    				</div>
+							    			</div>
+							    		</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-departure-details">
+					    					<span class="departure-time">06:00</span>
+					    					<span class="departure-place">BLR</span>
+					    					<span class="departure-date">03 feb</span>
+					    					<span class="departure-status">Late Departure</span>
+					    				</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div>
+							    			<img class="flight-time-img" src="assets/img/flight-time.png" alt="flight time">
+							    		</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-arrival-details">
+					    					<span class="arrival-time">15:34</span>
+					    					<span class="arrival-place">HYD</span>
+					    					<span class="arrival-date">03 feb</span>
+					    					<span class="arrival-status">SME Fare</span>
+					    				</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-price-details">
+					    					<span class="price">6757 INR</span>
+					    					<span class="price-policy">Outside Policy</span>
+					    					<a class="btn more-flight-details" data-toggle="collapse" href="#flightDetails6" role="button" aria-expanded="false" aria-controls="flightDetails6">
+											    Flight Details <i class="fa fa-caret-down"></i>
+											</a>
+					    				</div>
+							    	</div>
+							    </div>
+							    <div class="row">
+							    	<div class="collapse" id="flightDetails6">
+									  <div class="card card-body">
+									    More Details of Flight
+									  </div>
+									</div>
+							    </div>
+							  </div>
+							</div>
+							<div class="card">
+							  <div class="card-body">
+							    <div class="row">
+							    	<div class="col-12 col-md-3">
+							    		<div class="d-flex flex-nowrap">
+							    			<div class="">
+							    				<input type="radio" name="flight">
+							    			</div>
+							    			<div class="p-2 d-flex">
+							    				<div>
+							    					<img class="flight-logo" src="assets/img/airasia.png" alt="Air Asia">
+							    				</div>
+							    				<div class="flight-details">
+							    					<h5 class="flight-name">Air Asia</h5>
+							    					<span class="flight-number">l5-454</span>
+							    					<span class="flight-class">Business Class</span>
+							    					<span class="refund-status">Partially Refundable</span>
+							    				</div>
+							    			</div>
+							    		</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-departure-details">
+					    					<span class="departure-time">06:00</span>
+					    					<span class="departure-place">BLR</span>
+					    					<span class="departure-date">03 feb</span>
+					    					<span class="departure-status">Late Departure</span>
+					    				</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div>
+							    			<img class="flight-time-img" src="assets/img/flight-time.png" alt="flight time">
+							    		</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-arrival-details">
+					    					<span class="arrival-time">15:34</span>
+					    					<span class="arrival-place">HYD</span>
+					    					<span class="arrival-date">03 feb</span>
+					    					<span class="arrival-status">SME Fare</span>
+					    				</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-price-details">
+					    					<span class="price">6757 INR</span>
+					    					<span class="price-policy">Outside Policy</span>
+					    					<a class="btn more-flight-details" data-toggle="collapse" href="#flightDetails7" role="button" aria-expanded="false" aria-controls="flightDetails7">
+											    Flight Details <i class="fa fa-caret-down"></i>
+											</a>
+					    				</div>
+							    	</div>
+							    </div>
+							    <div class="row">
+							    	<div class="collapse" id="flightDetails7">
+									  <div class="card card-body">
+									    More Details of Flight
+									  </div>
+									</div>
+							    </div>
+							  </div>
+							</div>
+							<div class="card">
+							  <div class="card-body">
+							    <div class="row">
+							    	<div class="col-12 col-md-3">
+							    		<div class="d-flex flex-nowrap">
+							    			<div class="">
+							    				<input type="radio" name="flight">
+							    			</div>
+							    			<div class="p-2 d-flex">
+							    				<div>
+							    					<img class="flight-logo" src="assets/img/airasia.png" alt="Air Asia">
+							    				</div>
+							    				<div class="flight-details">
+							    					<h5 class="flight-name">Air Asia</h5>
+							    					<span class="flight-number">l5-454</span>
+							    					<span class="flight-class">Business Class</span>
+							    					<span class="refund-status">Partially Refundable</span>
+							    				</div>
+							    			</div>
+							    		</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-departure-details">
+					    					<span class="departure-time">06:00</span>
+					    					<span class="departure-place">BLR</span>
+					    					<span class="departure-date">03 feb</span>
+					    					<span class="departure-status">Late Departure</span>
+					    				</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div>
+							    			<img class="flight-time-img" src="assets/img/flight-time.png" alt="flight time">
+							    		</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-arrival-details">
+					    					<span class="arrival-time">15:34</span>
+					    					<span class="arrival-place">HYD</span>
+					    					<span class="arrival-date">03 feb</span>
+					    					<span class="arrival-status">SME Fare</span>
+					    				</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-price-details">
+					    					<span class="price">6757 INR</span>
+					    					<span class="price-policy">Outside Policy</span>
+					    					<a class="btn more-flight-details" data-toggle="collapse" href="#flightDetails8" role="button" aria-expanded="false" aria-controls="flightDetails8">
+											    Flight Details <i class="fa fa-caret-down"></i>
+											</a>
+					    				</div>
+							    	</div>
+							    </div>
+							    <div class="row">
+							    	<div class="collapse" id="flightDetails8">
+									  <div class="card card-body">
+									    More Details of Flight
+									  </div>
+									</div>
+							    </div>
+							  </div>
+							</div>
+							<div class="card">
+							  <div class="card-body">
+							    <div class="row">
+							    	<div class="col-12 col-md-3">
+							    		<div class="d-flex flex-nowrap">
+							    			<div class="">
+							    				<input type="radio" name="flight">
+							    			</div>
+							    			<div class="p-2 d-flex">
+							    				<div>
+							    					<img class="flight-logo" src="assets/img/airasia.png" alt="Air Asia">
+							    				</div>
+							    				<div class="flight-details">
+							    					<h5 class="flight-name">Air Asia</h5>
+							    					<span class="flight-number">l5-454</span>
+							    					<span class="flight-class">Business Class</span>
+							    					<span class="refund-status">Partially Refundable</span>
+							    				</div>
+							    			</div>
+							    		</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-departure-details">
+					    					<span class="departure-time">06:00</span>
+					    					<span class="departure-place">BLR</span>
+					    					<span class="departure-date">03 feb</span>
+					    					<span class="departure-status">Late Departure</span>
+					    				</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div>
+							    			<img class="flight-time-img" src="assets/img/flight-time.png" alt="flight time">
+							    		</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-arrival-details">
+					    					<span class="arrival-time">15:34</span>
+					    					<span class="arrival-place">HYD</span>
+					    					<span class="arrival-date">03 feb</span>
+					    					<span class="arrival-status">SME Fare</span>
+					    				</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-price-details">
+					    					<span class="price">6757 INR</span>
+					    					<span class="price-policy">Outside Policy</span>
+					    					<a class="btn more-flight-details" data-toggle="collapse" href="#flightDetails9" role="button" aria-expanded="false" aria-controls="flightDetails9">
+											    Flight Details <i class="fa fa-caret-down"></i>
+											</a>
+					    				</div>
+							    	</div>
+							    </div>
+							    <div class="row">
+							    	<div class="collapse" id="flightDetails9">
+									  <div class="card card-body">
+									    More Details of Flight
+									  </div>
+									</div>
+							    </div>
+							  </div>
+							</div>
+							<div class="card">
+							  <div class="card-body">
+							    <div class="row">
+							    	<div class="col-12 col-md-3">
+							    		<div class="d-flex flex-nowrap">
+							    			<div class="">
+							    				<input type="radio" name="flight">
+							    			</div>
+							    			<div class="p-2 d-flex">
+							    				<div>
+							    					<img class="flight-logo" src="assets/img/airasia.png" alt="Air Asia">
+							    				</div>
+							    				<div class="flight-details">
+							    					<h5 class="flight-name">Air Asia</h5>
+							    					<span class="flight-number">l5-454</span>
+							    					<span class="flight-class">Business Class</span>
+							    					<span class="refund-status">Partially Refundable</span>
+							    				</div>
+							    			</div>
+							    		</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-departure-details">
+					    					<span class="departure-time">06:00</span>
+					    					<span class="departure-place">BLR</span>
+					    					<span class="departure-date">03 feb</span>
+					    					<span class="departure-status">Late Departure</span>
+					    				</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div>
+							    			<img class="flight-time-img" src="assets/img/flight-time.png" alt="flight time">
+							    		</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-arrival-details">
+					    					<span class="arrival-time">15:34</span>
+					    					<span class="arrival-place">HYD</span>
+					    					<span class="arrival-date">03 feb</span>
+					    					<span class="arrival-status">SME Fare</span>
+					    				</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-price-details">
+					    					<span class="price">6757 INR</span>
+					    					<span class="price-policy">Outside Policy</span>
+					    					<a class="btn more-flight-details" data-toggle="collapse" href="#flightDetails10" role="button" aria-expanded="false" aria-controls="flightDetails10">
+											    Flight Details <i class="fa fa-caret-down"></i>
+											</a>
+					    				</div>
+							    	</div>
+							    </div>
+							    <div class="row">
+							    	<div class="collapse" id="flightDetails10">
+									  <div class="card card-body">
+									    More Details of Flight
+									  </div>
+									</div>
+							    </div>
+							  </div>
+							</div>
+							<div class="card">
+							  <div class="card-body">
+							    <div class="row">
+							    	<div class="col-12 col-md-3">
+							    		<div class="d-flex flex-nowrap">
+							    			<div class="">
+							    				<input type="radio" name="flight">
+							    			</div>
+							    			<div class="p-2 d-flex">
+							    				<div>
+							    					<img class="flight-logo" src="assets/img/airasia.png" alt="Air Asia">
+							    				</div>
+							    				<div class="flight-details">
+							    					<h5 class="flight-name">Air Asia</h5>
+							    					<span class="flight-number">l5-454</span>
+							    					<span class="flight-class">Business Class</span>
+							    					<span class="refund-status">Partially Refundable</span>
+							    				</div>
+							    			</div>
+							    		</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-departure-details">
+					    					<span class="departure-time">06:00</span>
+					    					<span class="departure-place">BLR</span>
+					    					<span class="departure-date">03 feb</span>
+					    					<span class="departure-status">Late Departure</span>
+					    				</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div>
+							    			<img class="flight-time-img" src="assets/img/flight-time.png" alt="flight time">
+							    		</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-arrival-details">
+					    					<span class="arrival-time">15:34</span>
+					    					<span class="arrival-place">HYD</span>
+					    					<span class="arrival-date">03 feb</span>
+					    					<span class="arrival-status">SME Fare</span>
+					    				</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-price-details">
+					    					<span class="price">6757 INR</span>
+					    					<span class="price-policy">Outside Policy</span>
+					    					<a class="btn more-flight-details" data-toggle="collapse" href="#flightDetails11" role="button" aria-expanded="false" aria-controls="flightDetails11">
+											    Flight Details <i class="fa fa-caret-down"></i>
+											</a>
+					    				</div>
+							    	</div>
+							    </div>
+							    <div class="row">
+							    	<div class="collapse" id="flightDetails11">
+									  <div class="card card-body">
+									    More Details of Flight
+									  </div>
+									</div>
+							    </div>
+							  </div>
+							</div>
+							<div class="card">
+							  <div class="card-body">
+							    <div class="row">
+							    	<div class="col-12 col-md-3">
+							    		<div class="d-flex flex-nowrap">
+							    			<div class="">
+							    				<input type="radio" name="flight">
+							    			</div>
+							    			<div class="p-2 d-flex">
+							    				<div>
+							    					<img class="flight-logo" src="assets/img/airasia.png" alt="Air Asia">
+							    				</div>
+							    				<div class="flight-details">
+							    					<h5 class="flight-name">Air Asia</h5>
+							    					<span class="flight-number">l5-454</span>
+							    					<span class="flight-class">Business Class</span>
+							    					<span class="refund-status">Partially Refundable</span>
+							    				</div>
+							    			</div>
+							    		</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-departure-details">
+					    					<span class="departure-time">06:00</span>
+					    					<span class="departure-place">BLR</span>
+					    					<span class="departure-date">03 feb</span>
+					    					<span class="departure-status">Late Departure</span>
+					    				</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div>
+							    			<img class="flight-time-img" src="assets/img/flight-time.png" alt="flight time">
+							    		</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-arrival-details">
+					    					<span class="arrival-time">15:34</span>
+					    					<span class="arrival-place">HYD</span>
+					    					<span class="arrival-date">03 feb</span>
+					    					<span class="arrival-status">SME Fare</span>
+					    				</div>
+							    	</div>
+							    	<div class="col-12 col-md-2">
+							    		<div class="flight-price-details">
+					    					<span class="price">6757 INR</span>
+					    					<span class="price-policy">Outside Policy</span>
+					    					<a class="btn more-flight-details" data-toggle="collapse" href="#flightDetails12" role="button" aria-expanded="false" aria-controls="flightDetails12">
+											    Flight Details <i class="fa fa-caret-down"></i>
+											</a>
+					    				</div>
+							    	</div>
+							    </div>
+							    <div class="row">
+							    	<div class="collapse" id="flightDetails12">
+									  <div class="card card-body">
+									    More Details of Flight
+									  </div>
+									</div>
+							    </div>
+							  </div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="footer-top">
+				<div class="row">
+					<div class="col-9">
+                		
+					</div>
+					<div class="col">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="complete-details">
+			<div class="row m-0">
+				<div class="col-12 col-sm-2 ">
+            		<div class="tableContainer">
+            			<table style="width:100%" class="completeDetailsFlightInfo">
+						  <tr>
+						    <td>Air Asia I5 - 738</td>
+						    <td>08:30 DEL 02 Feb</td>
+						    <td><i class="fa fa-arrow-right" aria-hidden="true"></i></td>
+						    <td>10:35 BOM 02 Feb</td>
+						    <td>3,717 INR <i class="fa fa-check-circle-o" aria-hidden="true"></i></td>
+						  </tr>
+						</table>
+            			<!-- <span class="completeDetailsFlightName">Air Asia I5 - 738</span>
+            			<span class="completeDetailsFromDate">08:30 DEL 02 Feb</span>
+            			<span class="completeDetailsArrow"><i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+            			<span class="completeDetailsToDate">10:35 BOM 02 Feb</span>
+            			<span class="completeDetailsCost">3,717 INR <i class="fa fa-check-circle-o" aria-hidden="true"></i></span> -->
+            		</div>
+            		<div class="condition">
+            			** Outside policy requires Approval.
+            		</div>
+				</div>
+				<div class="col-12 col-sm-8 completeDetailsSlider">
+					<div class="row">
+						<div class="col-12">
+							<div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="900000">
+						        <div class="carousel-inner row w-100 mx-auto completeDetailsCarouselRow" role="listbox">
+						            
+						            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-2 active">
+						                <div class="carouselDiv">
+						                	<div class="row">
+						                		<div class="col-3 no-padding">
+						                			<img src="assets/img/aeroplane.png" alt="aeroplane" class="slider-plane">
+						                		</div>
+						                		<div class="col-9 no-padding">
+						                			<span class="flight-dest-arr">Bangalore To Hyderabad</span>
+						                			<span class="flight-date-time">03 Feb 05:00 hrs - 09:00 hrs</span>
+						                		</div>
+						                	</div>
+						                </div>
+						            </div>
+						            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-2 makeSelected">
+						                <div class="carouselDiv">
+						                	<div class="row">
+						                		<div class="col-3 no-padding">
+						                			<img src="assets/img/aeroplane.png" alt="aeroplane" class="slider-plane">
+						                		</div>
+						                		<div class="col-9 no-padding">
+						                			<span class="flight-dest-arr">Bangalore To Hyderabad</span>
+						                			<span class="flight-date-time">03 Feb 05:00 hrs - 09:00 hrs</span>
+						                		</div>
+						                	</div>
+						                </div>
+						            </div>
+						            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-2">
+						                <div class="carouselDiv">
+						                	<div class="row">
+						                		<div class="col-3 no-padding">
+						                			<img src="assets/img/aeroplane.png" alt="aeroplane" class="slider-plane">
+						                		</div>
+						                		<div class="col-9 no-padding">
+						                			<span class="flight-dest-arr">Bangalore To Hyderabad</span>
+						                			<span class="flight-date-time">03 Feb 05:00 hrs - 09:00 hrs</span>
+						                		</div>
+						                	</div>
+						                </div>
+						            </div>
+						            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-2">
+						                <div class="carouselDiv">
+						                	<div class="row">
+						                		<div class="col-3 no-padding">
+						                			<img src="assets/img/aeroplane.png" alt="aeroplane" class="slider-plane">
+						                		</div>
+						                		<div class="col-9 no-padding">
+						                			<span class="flight-dest-arr">Bangalore To Hyderabad</span>
+						                			<span class="flight-date-time">03 Feb 05:00 hrs - 09:00 hrs</span>
+						                		</div>
+						                	</div>
+						                </div>
+						            </div>
+						            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-2">
+						                <div class="carouselDiv">
+						                	<div class="row">
+						                		<div class="col-3 no-padding">
+						                			<img src="assets/img/aeroplane.png" alt="aeroplane" class="slider-plane">
+						                		</div>
+						                		<div class="col-9 no-padding">
+						                			<span class="flight-dest-arr">Bangalore To Hyderabad</span>
+						                			<span class="flight-date-time">03 Feb 05:00 hrs - 09:00 hrs</span>
+						                		</div>
+						                	</div>
+						                </div>
+						            </div>
+						            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-2">
+						                <div class="carouselDiv">
+						                	<div class="row">
+						                		<div class="col-3 no-padding">
+						                			<img src="assets/img/aeroplane.png" alt="aeroplane" class="slider-plane">
+						                		</div>
+						                		<div class="col-9 no-padding">
+						                			<span class="flight-dest-arr">Bangalore To Hyderabad</span>
+						                			<span class="flight-date-time">03 Feb 05:00 hrs - 09:00 hrs</span>
+						                		</div>
+						                	</div>
+						                </div>
+						            </div>
+						            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-2">
+						                <div class="carouselDiv">
+						                	<div class="row">
+						                		<div class="col-3 no-padding">
+						                			<img src="assets/img/aeroplane.png" alt="aeroplane" class="slider-plane">
+						                		</div>
+						                		<div class="col-9 no-padding">
+						                			<span class="flight-dest-arr">Bangalore To Hyderabad</span>
+						                			<span class="flight-date-time">03 Feb 05:00 hrs - 09:00 hrs</span>
+						                		</div>
+						                	</div>
+						                </div>
+						            </div>
+						            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-2">
+						              <div class="carouselDiv">
+						                	<div class="row">
+						                		<div class="col-3 no-padding">
+						                			<img src="assets/img/aeroplane.png" alt="aeroplane" class="slider-plane">
+						                		</div>
+						                		<div class="col-9 no-padding">
+						                			<span class="flight-dest-arr">Bangalore To Hyderabad</span>
+						                			<span class="flight-date-time">03 Feb 05:00 hrs - 09:00 hrs</span>
+						                		</div>
+						                	</div>
+						                </div>
+						            </div>
+						            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-2">
+						              <div class="carouselDiv">
+						                	<div class="row">
+						                		<div class="col-3 no-padding">
+						                			<img src="assets/img/aeroplane.png" alt="aeroplane" class="slider-plane">
+						                		</div>
+						                		<div class="col-9 no-padding">
+						                			<span class="flight-dest-arr">Bangalore To Hyderabad</span>
+						                			<span class="flight-date-time">03 Feb 05:00 hrs - 09:00 hrs</span>
+						                		</div>
+						                	</div>
+						                </div>
+						            </div>
+						            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-2">
+						              <div class="carouselDiv">
+						                	<div class="row">
+						                		<div class="col-3 no-padding">
+						                			<img src="assets/img/aeroplane.png" alt="aeroplane" class="slider-plane">
+						                		</div>
+						                		<div class="col-9 no-padding">
+						                			<span class="flight-dest-arr">Bangalore To Hyderabad</span>
+						                			<span class="flight-date-time">03 Feb 05:00 hrs - 09:00 hrs</span>
+						                		</div>
+						                	</div>
+						                </div>
+						            </div>
+						            <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-2">
+						              <div class="carouselDiv">
+						                	<div class="row">
+						                		<div class="col-3 no-padding">
+						                			<img src="assets/img/aeroplane.png" alt="aeroplane" class="slider-plane">
+						                		</div>
+						                		<div class="col-9 no-padding">
+						                			<span class="flight-dest-arr">Bangalore To Hyderabad</span>
+						                			<span class="flight-date-time">03 Feb 05:00 hrs - 09:00 hrs</span>
+						                		</div>
+						                	</div>
+						                </div>
+						            </div>
+						          <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-2">
+						            <div class="carouselDiv">
+						                	<div class="row">
+						                		<div class="col-3 no-padding">
+						                			<img src="assets/img/aeroplane.png" alt="aeroplane" class="slider-plane">
+						                		</div>
+						                		<div class="col-9 no-padding">
+						                			<span class="flight-dest-arr">Bangalore To Hyderabad</span>
+						                			<span class="flight-date-time">03 Feb 05:00 hrs - 09:00 hrs</span>
+						                		</div>
+						                	</div>
+						                </div>
+						          </div>
+						        </div>
+						        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+						            <i class="fa fa-chevron-left fa-lg text-muted"></i>
+						            <span class="sr-only">Previous</span>
+						        </a>
+						        <a class="carousel-control-next text-faded" href="#carouselExample" role="button" data-slide="next">
+						            <i class="fa fa-chevron-right fa-lg text-muted"></i>
+						            <span class="sr-only">Next</span>
+						        </a>
+						    </div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-2 completeDetailsPaymentCol">
+					<div class="text-center">
+						<span class="completeDetailsPayment"> Budget: 4,612 INR </span>
+						<span class="completeDetailsPayment"> Your Package: 3,784 INR </span>
+						<div>
+							<button class="btn completeDetailsPaymentButtons cancelBtn">Cancel</button>
+							<button class="btn completeDetailsPaymentButtons proceedBtn">Proceed</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+		  <div class="footer-left">
+		  	<ul class="footer-nav">
+		      <li class="footer-item">
+		        <a class="footer-link">&copy; ITILITE. All Rights Reserved.</a>
+		      </li>
+		      <li class="footer-item">
+		        <a class="footer-link"> | </a>
+		      </li>
+		      <li class="footer-item">
+		        <a class="footer-link" target="_blank" href="https://itilite.zendesk.com/hc/en-us">FAQ</a>
+		      </li>
+		      <li class="footer-item">
+		        <a class="footer-link"> | </a>
+		      </li>
+		      <li class="footer-item">
+		        <a class="footer-link" target="_blank" href="https://itilite.com/privacy-policy">Privacy Policy</a>
+		      </li>
+		    </ul>
+		  </div>
+		  <div class="footer-right">
+		  	<ul class="footer-nav">
+		      <li class="footer-item">
+		        <a class="footer-link" href="mailto:support@itilite.com">Contact : support@itilite.com</a>
+		      </li>
+		      <li class="footer-item">
+		        <a class="footer-link"> | </a>
+		      </li>
+		      <li class="footer-item">
+		        <a class="footer-link" href="tel:+919513071160">+91 9513 0711 60</a>
+		      </li>
+		    </ul>
+		  </div>
+		</footer>
+
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script type="text/javascript">
+			$('#carouselExample').on('slide.bs.carousel', function (e) {
+			    var $e = $(e.relatedTarget);
+			    var idx = $e.index();
+			    var itemsPerSlide = 5;
+			    var totalItems = $('.carousel-item').length;
+			    
+			    if (idx >= totalItems-(itemsPerSlide-1)) {
+			        var it = itemsPerSlide - (totalItems - idx);
+			        for (var i=0; i<it; i++) {
+			            // append slides to end
+			            if (e.direction=="left") {
+			                $('.carousel-item').eq(i).appendTo('.carousel-inner');
+			            }
+			            else {
+			                $('.carousel-item').eq(0).appendTo('.carousel-inner');
+			            }
+			        }
+			    }
+			});
+		</script>
+	</body>
+</html>
